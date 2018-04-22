@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Denis Rodrigues Camara</title>
+		<link rel="stylesheet" type="text/css" href="css/css.css">	
+	</head>			
+	<style>
+			.nome {
+			margin: 5px 0;
+			padding: 10px 10px;
+			background-color: #444444;
+			font-size: 15px;
+			color: #fff
+		}
+		.quem {	
+			margin: 10px 0;
+			padding: 30px 30px;
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			background-color: #2283c9
+		}
+		  .nav {
+		  	text-align: center;
+		    display: flex;
+		    justify-content: flex-end;
+		    padding: 2em;    
+		    ul {
+		      list-style: none;
+		      margin: 20;
+		      padding: 0;
+		      display: flex;           
+		      a {
+		        position: relative;
+		        display: inline-block;
+		        padding: 1em;
+		        text-decoration: none;
+		        color: #fff;
+		        &:hover {
+		          color: rgba(255,255,255,0.7);
+		        }
+		      }
+		    }
+		  }
+		}
+		.blocos {
+		  display: block;
+		  width: 90%;
+		  margin: 20 auto;
+		  text-align: center;
+		}
+		  .blocos .bloco {
+		  	text-align: center;
+		    width: 40%;
+		    display: inline-table;
+		    background: #069;
+		    color: #fff;
+		    padding: 10px;
+		    margin: 5px;
+		  }  
+		  .blocos strong {
+		    font-family: Arial, Helvetica, Montserrat, sans-serif;
+		    text-align: center;
+		    color: 000;
+		    padding-bottom: 5px;
+		    font-weight: bold;
+		    font-size: 25px;
+		  }
+		  .blocos p {
+		    font-family: Arial, Helvetica, Montserrat, sans-serif;
+		    text-align: left;
+		  }
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.menu {
+			width: 100%;
+			height: 50px;
+			background-color: #222;
+			font-family: 'Arial';
+		}
+		.menu ul{
+			list-style: none;
+			position: relative;
+		}
+		.menu ul li {
+			width: 150px;
+			float: left;
+		}
+		.menu a {
+			padding: 15px;
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			background-color: #222;
+			color: #fff;
+		}
+		.menu ul ul {
+			position: absolute;
+			visibility: hidden;
+		}
+		.menu ul li:hover ul {
+			visibility: visible;
+		}
+		.menu a:hover {
+			background-color: #f4f4f4;
+			color: #555;
+		}
+		.menu ul ul li {
+			float: none;
+			border-bottom: solid 1px #ccc;
+		}
+		.menu ul ul li a {
+			background-color: #069;
+		}
+		label[for="bt_menu"]{
+			padding: 5px;
+			background-color: #222;
+			color: #fff;
+			font-family: 'Arial';
+			text-align: center;
+			font-size: 30px;
+			cursor: pointer;
+			width: 50px;
+			height: 50px;
+		}
+		#bt_menu {
+				display: none;
+			}
+			label[for="bt_menu"]{
+				display: none;
+			}
+		@media (max-width: 600px){
+			label[for="bt_menu"]{
+				display: block;
+			}
+			#bt_menu: checked ~ .menu{
+				margin-left: 0;
+			}
+			.menu {
+				margin-top: 5px;
+				margin-left: -100%;
+				transition: all .4s;
+			}
+			.menu ul li {
+				width: 100%;
+				float: none;
+			}
+			.menu ul ul {
+				position: static;
+				overflow: hidden;
+				max-height: 0;
+				transition: all .4s;
+			}
+			.menu ul li:hover ul{
+				height: auto;
+				max-height: 200px;
+			}				
+		}
+		@media (min-width: 600px) {
+		  .nome{
+		  	margin: 10px 0;	
+		  	padding: 20px 30px;
+		  	font-size: 30px;
+		  }
+		  .quem {
+		  	margin: 10px 0;
+			padding: 30px 30px;
+		  	font-size: 54px;
+		  }
+		  strong {
+		  	font-size: 40px;
+		  }
+		}
+	</style>
+		<body>	
+			<input type="checkbox" id="bt_menu">
+			<label for="bt_menu">&#9776;</label>
+			<nav class="menu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Serviços</a>
+						<ul>
+							<a href="#">Criação de Sites</a>
+						</ul>
+					</li>	
+					<li><a href="#">Cursos</a>
+						<ul>
+							<a href="#">Java</a>							
+						</ul>
+					</li>
+					<li><a href="#">Contato</a>
+						<ul>
+							<a href="#">(11)96188-7584</a>
+							<a href="#">denisrc300@hotmail.com</a>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+				<header class="nome">
+					<h1>Denis Rodrigues Camara</h1>
+				</header>
+					<section class="quem">					
+						<h1>Quem eu Sou?</h1>	
+					</section>					
+			<nav class="nav">
+				<ul>
+					<div class="blocos">
+						<div class="bloco">
+					      <strong>Um pouco sobre ...</strong>
+					      <p>Eu sou o denis rodrigues camara, tenho 22 anos estou cursando faculdade de engenharia da computação, já fiz curso de programação em java no senai de santa cecilia para ter uma base de algoritimos e linguagem de programação. </p>      
+					    </div>
+					    <div class="bloco">
+					      <strong>Quero muito ser reconhecido</strong>
+					      <p>No 4° semestre da faculdade começei a ter aula de algoritimo em c, proximo semestre tive um projeto em html, com isso me ajudou a enxergar que eu queria um desenvolvedor.</p>
+					      <p>Quero ser reconhecido entre desenvolvedore e startups. Estou estudando muito para isso e quero realizar algo grande um dia.</p>
+					     </div>
+						<div class="bloco">
+					      <strong>Desenvolvedor</strong>
+					      <p>Atualmente eu não estou trabalhando gostaria muito de uma oportunidade para a vaga. </p>      
+					    </div>
+						<div class="bloco">
+					      <strong>Estou disposto</strong>
+					      <p>A aprender mais formas e maniras de programar.</p>      
+					    </div>
+					    <div class="bloco">
+					      <strong>Gosto de Games</strong>
+					      <p>música, filmes e outras coisas.</p>
+					      <p></p>
+					    </div>
+			   	</ul>
+					    </div>
+					</div>
+			</nav>
+		</body>
+</html>
